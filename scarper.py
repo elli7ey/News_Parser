@@ -58,9 +58,7 @@ def create_csv():
     with open('tutby.csv', 'w', newline='', encoding='utf-8') as file:
         datawriter = csv.writer(file, delimiter=',')
         datawriter.writerow(
-                ['title'] + ['description'] +
-                ['category'] + ['date'] +
-                ['preview_url'] + ['url']
+                ['title', 'description', 'category', 'date', 'preview_url', 'url']
                 )
 
 
@@ -69,9 +67,7 @@ def write_csv(data):
         datawriter = csv.writer(file, delimiter=',')
         for news in data:
             datawriter.writerow(
-                [news['title']] + [news['description']] +
-                [news['category']] + [news['date']] +
-                [news['preview_url']] + [news['url']]
+                [news['title'], news['description'], news['category'], news['date'], news['preview_url'], news['url']]
             )
 
 
